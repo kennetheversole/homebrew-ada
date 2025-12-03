@@ -1,14 +1,14 @@
 class Ada < Formula
   desc "AI Assistant with Intent Routing"
   homepage "https://github.com/kennetheversole/ada"
-  version "0.1.0"
+  version "0.1.1"
 
   if Hardware::CPU.arm?
-    url "https://github.com/kennetheversole/ada/releases/download/v0.1.0/ada-aarch64-apple-darwin.tar.gz"
-    sha256 "7bd94533f9970ed2c5c58b64eef1becfa8c2ae34fb3d5b4cd1ed2f1b327db46f"
+    url "https://github.com/kennetheversole/ada/releases/download/v0.1.1/ada-aarch64-apple-darwin.tar.gz"
+    sha256 "cf850f4e076dbcad53b351787c9a02a1d96448221267394c0d2d5e4e3e75688d"
   else
-    url "https://github.com/kennetheversole/ada/releases/download/v0.1.0/ada-x86_64-apple-darwin.tar.gz"
-    sha256 "06c0fd47b2985a61eb1159d20487201fb816d146152762a321fc8e114dc0c5e3"
+    url "https://github.com/kennetheversole/ada/releases/download/v0.1.1/ada-x86_64-apple-darwin.tar.gz"
+    sha256 "a2ee2e4d7480ef1be8afb0ca3c0df45e8fd7c9679ae8d8c53c554f3d8f9bafc7"
   end
 
   def install
@@ -16,6 +16,6 @@ class Ada < Formula
   end
 
   test do
-    assert_match "ada 0.1.0", shell_output("#{bin}/ada --version")
+    assert_match "ada 0.1.1", shell_output("#{bin}/ada --version")
   end
 end
